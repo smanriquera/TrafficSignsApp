@@ -1,1 +1,1 @@
-ultralitics
+ultralytics
