@@ -1,0 +1,1 @@
+Indica la detención obligatoria ante la próxima línea de detención o, si no existe, antes de la intersección. Además, el conductor ha de ceder el paso a los vehículos que circulen por la vía a la que se aproxime.

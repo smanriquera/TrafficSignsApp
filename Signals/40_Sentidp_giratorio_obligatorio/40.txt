@@ -1,0 +1,1 @@
+Intersección de sentido giratorio-obligatorio. Las flechas señalan la dirección y sentido del movimiento giratorio que los vehículos deben seguir.

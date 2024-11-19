@@ -1,0 +1,1 @@
+Se utiliza para advertir la proximidad de una curva hacia la izquierda cuya velocidad de diseño es menor que la velocidad máxima o de operación del resto de la vía

@@ -1,0 +1,1 @@
+Indica a los vehículos que circulen por ella su prioridad respecto a otros que circulen por otra calzada.
