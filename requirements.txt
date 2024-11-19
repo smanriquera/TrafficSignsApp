@@ -3,7 +3,7 @@ opencv-python-headless
 ultralytics
 av
 pillow
-tensorflow
+tensorflow==2.11.0
 io
 time
 pathlib
