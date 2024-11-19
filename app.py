@@ -153,27 +153,18 @@ def inference(model=None):
                     convolucionales (CNNs), para lograr un alto nivel de precisión y robustez en la clasificación</h6>
                     </div>"""
     
-    # Subtitle 3 of streamlit application
-    sub_title3_cfg = """<div><h6 style="color:white; text-align:center; 
-                    font-family: 'Archivo', sans-serif; margin-top:-15px; margin-bottom:50px;"> 
-                                       
-      Antes de usar la cámara:
-
-      Asegúrate de que tu cámara frontal  esté limpia y libre de obstrucciones.
-
-      Cómo usar la cámara:
-
-      Activa la camara.
-
-      Apunta con la camara a la señal de trafico.
-      La cámara detectará las señales de tráfico y mostrará la información.
-
-      Limitaciones de las cámaras que detectan señales de tráfico:
-
-        1.El sistema puede no detectar todas las señales de tráfico.
-
-        2.El sistema puede ser menos preciso en condiciones climáticas adversas.
-        """
+ sub_title3_cfg = """<div><h6 style="color:white; text-align:center; 
+                    font-family: 'Archivo', sans-serif; margin-top:-15px; margin-bottom:50px;">
+                    Antes de usar la cámara:
+    <br>Asegúrate de que tu cámara frontal  esté limpia y libre de obstrucciones.
+     <br>Cómo usar la cámara:
+     <br>Activa la camara.
+     <br><br>Apunta con la camara a la señal de trafico y toma la fotografía.
+     <br>La cámara detectará las señales de tráfico y mostrará la información.
+     <br><br>Limitaciones de las cámaras que detectan señales de tráfico:
+     <br>1.El sistema puede no detectar todas las señales de tráfico.
+     <br>2.El sistema puede ser menos preciso en condiciones climáticas adversas</h6>
+                    </div>"""
 
     # Set html page configuration
     st.set_page_config(page_title="TrafficSigns Detec App", layout="wide", initial_sidebar_state="auto")
