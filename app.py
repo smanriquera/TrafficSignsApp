@@ -209,7 +209,7 @@ def inference(model=None):
                 out.write(g.read())  # Read bytes into file
             vid_file_name = "video.mp4"
     elif source == "webcam":
-        vid_file_name = 0
+        vid_file_name = source_webcam
     elif source == "foto":
 
        # Recargue el modelo de los archivos que guardamos       
