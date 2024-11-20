@@ -154,26 +154,18 @@ def inference(model=None):
                     </div>"""
     
     # Subtitle 3 of streamlit application
-    sub_title3_cfg = """<div><h6 style="color:white; text-align:center; 
-                    font-family: 'Archivo', sans-serif; margin-top:-15px; margin-bottom:50px;"> 
-                                       
-      Antes de usar la cámara:
 
-      Asegúrate de que tu cámara frontal  esté limpia y libre de obstrucciones.
+ sub_title3_cfg = """<div><h6 style="color:white; text-align:center; 
+                    font-family: 'Archivo', sans-serif; margin-top:-15px; margin-bottom:50px;">
+                    Antes de usar la cámara: Asegúrate de que tu cámara frontal  esté limpia y libre de obstrucciones.<br>
+		    Cómo usar la cámara:<br> Activa la camara.Apunta con la camara a la señal de trafico.<br>
+		    La cámara detectará las señales de tráfico y mostrará la información.<br><br>
+		    Limitaciones de las cámaras que detectan señales de tráfico:<br>
+		    1.El sistema puede no detectar todas las señales de tráfico.<br>
+        	    2.El sistema puede ser menos preciso en condiciones climáticas adversas.<br>
+        	    </h6></div>"""
+  
 
-      Cómo usar la cámara:
-
-      Activa la camara.
-
-      Apunta con la camara a la señal de trafico.
-      La cámara detectará las señales de tráfico y mostrará la información.
-
-      Limitaciones de las cámaras que detectan señales de tráfico:
-
-        1.El sistema puede no detectar todas las señales de tráfico.
-
-        2.El sistema puede ser menos preciso en condiciones climáticas adversas.
-        """
 
     # Set html page configuration
     st.set_page_config(page_title="TrafficSigns Detec App", layout="wide", initial_sidebar_state="auto")
