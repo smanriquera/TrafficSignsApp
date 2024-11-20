@@ -332,7 +332,3 @@ def inference(model=None):
 # Main function call
 if __name__ == "__main__":
     inference()
-
-# Main function call
-if __name__ == "__main__":
-    inference()
