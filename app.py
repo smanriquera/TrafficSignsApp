@@ -153,18 +153,27 @@ def inference(model=None):
                     convolucionales (CNNs), para lograr un alto nivel de precisión y robustez en la clasificación</h6>
                     </div>"""
     
- sub_title3_cfg = """<div><h6 style="color:white; text-align:center; 
-                    font-family: 'Archivo', sans-serif; margin-top:-15px; margin-bottom:50px;">
-                    Antes de usar la cámara:
-    <br>Asegúrate de que tu cámara frontal  esté limpia y libre de obstrucciones.
-     <br>Cómo usar la cámara:
-     <br>Activa la camara.
-     <br><br>Apunta con la camara a la señal de trafico y toma la fotografía.
-     <br>La cámara detectará las señales de tráfico y mostrará la información.
-     <br><br>Limitaciones de las cámaras que detectan señales de tráfico:
-     <br>1.El sistema puede no detectar todas las señales de tráfico.
-     <br>2.El sistema puede ser menos preciso en condiciones climáticas adversas</h6>
-                    </div>"""
+    # Subtitle 3 of streamlit application
+    sub_title3_cfg = """<div><h6 style="color:white; text-align:center; 
+                    font-family: 'Archivo', sans-serif; margin-top:-15px; margin-bottom:50px;"> 
+                                       
+      Antes de usar la cámara:
+
+      Asegúrate de que tu cámara frontal  esté limpia y libre de obstrucciones.
+
+      Cómo usar la cámara:
+
+      Activa la camara.
+
+      Apunta con la camara a la señal de trafico.
+      La cámara detectará las señales de tráfico y mostrará la información.
+
+      Limitaciones de las cámaras que detectan señales de tráfico:
+
+        1.El sistema puede no detectar todas las señales de tráfico.
+
+        2.El sistema puede ser menos preciso en condiciones climáticas adversas.
+        """
 
     # Set html page configuration
     st.set_page_config(page_title="TrafficSigns Detec App", layout="wide", initial_sidebar_state="auto")
@@ -182,26 +191,26 @@ def inference(model=None):
         st.image(logo, width=250)
 
     # Add elements to vertical setting menu
-    st.sidebar.title("User Configuration")
+    st.sidebar.title("Configuracion")
 
     # Add video source selection dropdown
     source = st.sidebar.selectbox(
         "Modo",
-        ("webcam", "video", "foto"),
+        ("Webcam", "Video", "Foto"),
     )
 
     vid_file_name = ""
     if source == "video":
-        vid_file = st.sidebar.file_uploader("Upload Video File", type=["mp4", "mov", "avi", "mkv"])
+        vid_file = st.sidebar.file_uploader("Subir Video", type=["mp4", "mov", "avi", "mkv"])
         if vid_file is not None:
             g = io.BytesIO(vid_file.read())  # BytesIO Object
             vid_location = "video.mp4"
             with open(vid_location, "wb") as out:  # Open temporary file as bytes
                 out.write(g.read())  # Read bytes into file
             vid_file_name = "video.mp4"
-    elif source == "webcam":
-        vid_file_name = 0
-    elif source == "foto":
+    elif source == "Webcam":
+        vid_file_name = 1
+    elif source == "Foto":
 
        # Recargue el modelo de los archivos que guardamos       
         modelo.load_weights('path_to_my_weights.h5')
@@ -251,10 +260,10 @@ def inference(model=None):
   
 
 
-    conf = float(st.sidebar.slider("Confidence Threshold", 0.0, 1.0, 0.20, 0.01))
-    iou = float(st.sidebar.slider("IoU Threshold", 0.0, 1.0, 0.55, 0.01))
+    conf = float(st.sidebar.slider("Confianza", 0.0, 1.0, 0.70, 0.01))
+    iou = float(st.sidebar.slider("Intersección Unión", 0.0, 1.0, 0.55, 0.01))
     
-    enable_trk = st.sidebar.radio("Enable Tracking", ("Yes", "No"))
+    enable_trk = st.sidebar.radio("Activar Tracking", ("Yes", "No"))
 
     col1, col2 = st.columns(2)
     org_frame = col1.empty()
