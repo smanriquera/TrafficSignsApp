@@ -163,7 +163,7 @@ def inference(model=None):
 		    Limitaciones de las cámaras que detectan señales de tráfico:<br>
 		    1.El sistema puede no detectar todas las señales de tráfico.<br>
         	    2.El sistema puede ser menos preciso en condiciones climáticas adversas.<br>
-        	    </h6></div>"""
+        	    """
   
 
 
